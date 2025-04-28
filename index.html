@@ -679,12 +679,23 @@
     <img src="static/hero/Villa.png" alt="Villa Song Saigon" class="absolute h-full bottom-0 left-[-20px] z-10">
     <img src="static/hero/River.png" alt="Villa Song Saigon" class="w-[80%] absolute bottom-0 left-[20%]">
   </section>
+  <!-- <section id="hero-new" class="h-[100vh] py-20 overflow-hidden">
+    <div class="absolute top-[12%] right-[25%] z-10 text-center text-[96px] font-['Gilda_Display']" data-aos="fade-up"
+      data-aos-delay="300">
+      <img src="static/Logo.png" alt="Villa Song Saigon" class="mx-auto mb-6 zoom-in-effect">
+      <h1 class="leading-none">
+        <span id="typed-title" class="typing-container"></span>
+      </h1>
+    </div>
+    <img src="static/hero/Villa.png" alt="Villa Song Saigon" class="absolute h-full bottom-0 left-[-20px] z-10">
+    <img src="static/hero/River.png" alt="Villa Song Saigon" class="w-[80%] absolute bottom-0 left-[20%]">
+  </section> -->
   <div class="sticky-book fixed bottom-4 right-4 z-50 hidden">
     <button
-      class="book-btn rounded-full min-w-[280px] border-2 bg-[#FFF7EC border-[#ffffff] text-white px-6 py-3 hover:bg-[#7a3636] transition-colors duration-300"
-      style="backdrop-filter: blur(80px)
-">Book
-      Your Stay</button>
+      class="book-btn rounded-full min-w-[280px] border-2 border-[#ffffff] text-white px-6 py-3 hover:bg-[#7a3636] transition-colors duration-300"
+      style="backdrop-filter: blur(80px); background-color: rgba(140, 60, 69, 0.7);">
+      Book Your Stay
+    </button>
   </div>
   <div style="background: linear-gradient(180deg, #FFF7EC 0%, #FFE2BD 100%);" class="relative">
     <div class="absolute top-[-250px] left-0 w-full h-[250px] z-10"
@@ -829,34 +840,103 @@
                 </div>
                 <div class="w-1/2 pt-[80px]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                   <div class="suites-slider-1 mb-[50px] mt-[50px]">
-                    <div class="organic-parallax-item">
-                      <div class="organic-shape">
-                        <div class="parallax-content">
-                          <img src="./static/rooms/image.png" alt="Luxury Suite 1">
-                        </div>
+                    <div class="image-container-parallax">
+                      <div class="image-mask-parallax">
+                        <svg viewBox="0 0 500 500">
+                          <!-- Thay đổi width="500" height="500" thành viewBox="0 0 500 500" -->
+                          <defs>
+                            <mask id="mask">
+                              <path fill="white">
+                                <animate attributeName="d" dur="60s" repeatCount="indefinite"
+                                  values="
+                                    M476,299Q454,348,426.5,392.5Q399,437,347.5,444Q296,451,246.5,467.5Q197,484,147,463Q97,442,82.5,390Q68,338,55.5,294Q43,250,44.5,201Q46,152,85.5,122.5Q125,93,162.5,61.5Q200,30,248,39Q296,48,340.5,64.5Q385,81,423,114.5Q461,148,479.5,199Q498,250,476,299Z; 
+                                    
+                                    M453.5,289Q413,328,399.5,374Q386,420,331.5,393.5Q277,367,239,415.5Q201,464,152.5,449Q104,434,129,365Q154,296,141,273Q128,250,108,211Q88,172,137,171Q186,170,198.5,124.5Q211,79,244,104.5Q277,130,310,131.5Q343,133,388.5,147.5Q434,162,464,206Q494,250,453.5,289Z; 
+                                    
+                                    M476,299Q454,348,426.5,392.5Q399,437,347.5,444Q296,451,246.5,467.5Q197,484,147,463Q97,442,82.5,390Q68,338,55.5,294Q43,250,44.5,201Q46,152,85.5,122.5Q125,93,162.5,61.5Q200,30,248,39Q296,48,340.5,64.5Q385,81,423,114.5Q461,148,479.5,199Q498,250,476,299Z">
+                                </animate>
+                                <animateTransform attributeName="transform" type="rotate" from="0 250 250"
+                                  to="360 250 250" dur="60s" repeatCount="indefinite"></animateTransform>
+                              </path>
+                            </mask>
+                          </defs>
+                        </svg>
                       </div>
+                      <img src="./static/rooms/image.png" alt="Luxury Suite 1" class="image-parallax">
                     </div>
-                    <div class="organic-parallax-item">
-                      <div class="organic-shape">
-                        <div class="parallax-content">
-                          <img src="./static/rooms/302_Sanctuary_Room_2.avif" alt="Luxury Suite 2">
-                        </div>
+                    <div class="image-container-parallax">
+                      <div class="image-mask-parallax">
+                        <svg viewBox="0 0 500 500">
+                          <!-- Thay đổi width="500" height="500" thành viewBox="0 0 500 500" -->
+                          <defs>
+                            <mask id="mask">
+                              <path fill="white">
+                                <animate attributeName="d" dur="60s" repeatCount="indefinite"
+                                  values="
+                                    M476,299Q454,348,426.5,392.5Q399,437,347.5,444Q296,451,246.5,467.5Q197,484,147,463Q97,442,82.5,390Q68,338,55.5,294Q43,250,44.5,201Q46,152,85.5,122.5Q125,93,162.5,61.5Q200,30,248,39Q296,48,340.5,64.5Q385,81,423,114.5Q461,148,479.5,199Q498,250,476,299Z; 
+                                    
+                                    M453.5,289Q413,328,399.5,374Q386,420,331.5,393.5Q277,367,239,415.5Q201,464,152.5,449Q104,434,129,365Q154,296,141,273Q128,250,108,211Q88,172,137,171Q186,170,198.5,124.5Q211,79,244,104.5Q277,130,310,131.5Q343,133,388.5,147.5Q434,162,464,206Q494,250,453.5,289Z; 
+                                    
+                                    M476,299Q454,348,426.5,392.5Q399,437,347.5,444Q296,451,246.5,467.5Q197,484,147,463Q97,442,82.5,390Q68,338,55.5,294Q43,250,44.5,201Q46,152,85.5,122.5Q125,93,162.5,61.5Q200,30,248,39Q296,48,340.5,64.5Q385,81,423,114.5Q461,148,479.5,199Q498,250,476,299Z">
+                                </animate>
+                                <animateTransform attributeName="transform" type="rotate" from="0 250 250"
+                                  to="360 250 250" dur="60s" repeatCount="indefinite"></animateTransform>
+                              </path>
+                            </mask>
+                          </defs>
+                        </svg>
                       </div>
+                      <img src="./static/rooms/302_Sanctuary_Room_2.avif" alt="Luxury Suite 2" class="image-parallax">
                     </div>
-                    <div class="organic-parallax-item">
-                      <div class="organic-shape">
-                        <div class="parallax-content">
-                          <img src="./static/rooms/102.avif" alt="Luxury Suite 3">
-                        </div>
+                    <div class="image-container-parallax">
+                      <div class="image-mask-parallax">
+                        <svg viewBox="0 0 500 500">
+                          <!-- Thay đổi width="500" height="500" thành viewBox="0 0 500 500" -->
+                          <defs>
+                            <mask id="mask">
+                              <path fill="white">
+                                <animate attributeName="d" dur="60s" repeatCount="indefinite"
+                                  values="
+                                    M476,299Q454,348,426.5,392.5Q399,437,347.5,444Q296,451,246.5,467.5Q197,484,147,463Q97,442,82.5,390Q68,338,55.5,294Q43,250,44.5,201Q46,152,85.5,122.5Q125,93,162.5,61.5Q200,30,248,39Q296,48,340.5,64.5Q385,81,423,114.5Q461,148,479.5,199Q498,250,476,299Z; 
+                                    
+                                    M453.5,289Q413,328,399.5,374Q386,420,331.5,393.5Q277,367,239,415.5Q201,464,152.5,449Q104,434,129,365Q154,296,141,273Q128,250,108,211Q88,172,137,171Q186,170,198.5,124.5Q211,79,244,104.5Q277,130,310,131.5Q343,133,388.5,147.5Q434,162,464,206Q494,250,453.5,289Z; 
+                                    
+                                    M476,299Q454,348,426.5,392.5Q399,437,347.5,444Q296,451,246.5,467.5Q197,484,147,463Q97,442,82.5,390Q68,338,55.5,294Q43,250,44.5,201Q46,152,85.5,122.5Q125,93,162.5,61.5Q200,30,248,39Q296,48,340.5,64.5Q385,81,423,114.5Q461,148,479.5,199Q498,250,476,299Z">
+                                </animate>
+                                <animateTransform attributeName="transform" type="rotate" from="0 250 250"
+                                  to="360 250 250" dur="60s" repeatCount="indefinite"></animateTransform>
+                              </path>
+                            </mask>
+                          </defs>
+                        </svg>
                       </div>
+                      <img src="./static/rooms/102.avif" alt="Luxury Suite 3" class="image-parallax">
                     </div>
-                    <div class="organic-parallax-item">
-                      <div class="organic-shape">
-                        <div class="parallax-content">
-                          <img src="https://placehold.co/600x400" alt="Luxury Suite 4">
-                        </div>
+                    <div class="image-container-parallax">
+                      <div class="image-mask-parallax">
+                        <svg viewBox="0 0 500 500">
+                          <!-- Thay đổi width="500" height="500" thành viewBox="0 0 500 500" -->
+                          <defs>
+                            <mask id="mask">
+                              <path fill="white">
+                                <animate attributeName="d" dur="60s" repeatCount="indefinite"
+                                  values="
+                                    M476,299Q454,348,426.5,392.5Q399,437,347.5,444Q296,451,246.5,467.5Q197,484,147,463Q97,442,82.5,390Q68,338,55.5,294Q43,250,44.5,201Q46,152,85.5,122.5Q125,93,162.5,61.5Q200,30,248,39Q296,48,340.5,64.5Q385,81,423,114.5Q461,148,479.5,199Q498,250,476,299Z; 
+                                    
+                                    M453.5,289Q413,328,399.5,374Q386,420,331.5,393.5Q277,367,239,415.5Q201,464,152.5,449Q104,434,129,365Q154,296,141,273Q128,250,108,211Q88,172,137,171Q186,170,198.5,124.5Q211,79,244,104.5Q277,130,310,131.5Q343,133,388.5,147.5Q434,162,464,206Q494,250,453.5,289Z; 
+                                    
+                                    M476,299Q454,348,426.5,392.5Q399,437,347.5,444Q296,451,246.5,467.5Q197,484,147,463Q97,442,82.5,390Q68,338,55.5,294Q43,250,44.5,201Q46,152,85.5,122.5Q125,93,162.5,61.5Q200,30,248,39Q296,48,340.5,64.5Q385,81,423,114.5Q461,148,479.5,199Q498,250,476,299Z">
+                                </animate>
+                                <animateTransform attributeName="transform" type="rotate" from="0 250 250"
+                                  to="360 250 250" dur="60s" repeatCount="indefinite"></animateTransform>
+                              </path>
+                            </mask>
+                          </defs>
+                        </svg>
                       </div>
+                      <img src="https://placehold.co/600x400" alt="Luxury Suite 4" class="image-parallax">
                     </div>
+
                   </div>
                   <div class="suites-slider-2 text-sm">
                     <div>
@@ -1722,6 +1802,7 @@
           pauseOnFocus: false,
           infinite: true,
           speed: 500,
+          swipe: true,
           cssEase: 'cubic-bezier(0.4, 0, 0.2, 1)',
           responsive: [
             {
@@ -2703,6 +2784,45 @@
       animation-delay: -6s;
     }
   </style>
+  <style>
+    .image-container-parallax {
+      width: 100%;
+      /* Thay đổi từ 500px thành 100% */
+      height: auto;
+      /* Thay đổi từ 500px thành auto */
+      aspect-ratio: 1/1;
+      /* Giữ tỷ lệ 1:1 */
+      overflow: visible;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
+      position: relative;
+      max-width: 100%;
+      /* Đảm bảo không vượt quá div cha */
+    }
+
+    .image-mask-parallax {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .image-mask-parallax svg {
+      width: 100%;
+      /* Thay đổi từ width="500" thành 100% */
+      height: 100%;
+      /* Thay đổi từ height="500" thành 100% */
+      display: block;
+    }
+
+    .image-parallax {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mask: url(#mask);
+      -webkit-mask: url(#mask);
+    }
+  </style>
+  </style>
 
   <style>
     /* CSS cho hiệu ứng viền tròn đỏ và parallax */
@@ -3486,6 +3606,8 @@
   <!-- Tải Google Maps JavaScript API -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqJSGdEAuuq5SBbDmuAaQN4VQgkWl9Vr0&callback=initMap"
     async defer></script>
+
+
 </body>
 
 </html>
