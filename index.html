@@ -1222,7 +1222,7 @@
                             Garden/Pool view
                           </li>
                         </ul>
-                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Bathed in natural light, the Writer’s
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Bathed in natural light, the Writer's
                           Room offers a cozy retreat with views of the garden or pool. Perfect for solo travelers
                           seeking comfort, quiet inspiration, and colonial charm.
                         </p>
@@ -3518,6 +3518,11 @@
             "featureType": "water",
             "elementType": "labels.text.fill",
             "stylers": [{ "color": "#FFE2BD" }]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#FFF7EC" }]
           }
         ]
       });
@@ -3594,6 +3599,10 @@
         },
       ];
 
+      // Lưu kích thước ban đầu của marker
+      const originalSize = new google.maps.Size(50, 50);
+      const hoverSize = new google.maps.Size(60, 60);  // Kích thước lớn hơn khi hover
+
       // Thêm các marker cho các địa điểm xung quanh
       landmarks.forEach(landmark => {
         const marker = new google.maps.Marker({
@@ -3601,7 +3610,7 @@
           map: map,
           icon: {
             url: landmark.icon,
-            scaledSize: new google.maps.Size(50, 50),
+            scaledSize: originalSize,
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(25, 25)
           },
@@ -3621,13 +3630,25 @@
           disableAutoPan: true
         });
 
-        // Hiển thị info window khi hover vào marker
+        // Hiển thị info window và phóng to marker khi hover
         marker.addListener('mouseover', function () {
+          marker.setIcon({
+            url: landmark.icon,
+            scaledSize: hoverSize,
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(30, 30)  // Điều chỉnh điểm neo để giữ marker ở vị trí trung tâm
+          });
           infoWindow.open(map, marker);
         });
 
-        // Ẩn info window khi di chuột ra khỏi marker
+        // Ẩn info window và đưa marker về kích thước ban đầu khi di chuột ra khỏi marker
         marker.addListener('mouseout', function () {
+          marker.setIcon({
+            url: landmark.icon,
+            scaledSize: originalSize,
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(25, 25)
+          });
           infoWindow.close();
         });
 
