@@ -2974,8 +2974,9 @@
       const map = new google.maps.Map(document.getElementById("custom-map"), {
         center: villaSongLocation,
         zoom: 14,
-        disableDefaultUI: true, // Ẩn các điều khiển mặc định
-        zoomControl: true, // Hiển thị điều khiển zoom
+        zoomControl: false, // Ẩn điều khiển zoom
+        scrollwheel: false, // Vô hiệu hóa zoom bằng cuộn chuột
+        gestureHandling: 'none',
         styles: [
           // Style tùy chỉnh để có light theme như trong thiết kế
           {
@@ -3145,16 +3146,16 @@
       });
 
       // Thêm hiệu ứng vòng tròn mờ xung quanh vị trí chính
-      const cityCircle = new google.maps.Circle({
-        strokeColor: "#18181B",
-        strokeOpacity: 0.2,
-        strokeWeight: 2,
-        fillColor: "#FFE2BD",
-        fillOpacity: 0.1,
-        map: map,
-        center: villaSongLocation,
-        radius: 2500, // Bán kính tính bằng mét
-      });
+      // const cityCircle = new google.maps.Circle({
+      //   strokeColor: "#18181B",
+      //   strokeOpacity: 0.2,
+      //   strokeWeight: 2,
+      //   fillColor: "#FFE2BD",
+      //   fillOpacity: 0.1,
+      //   map: map,
+      //   center: villaSongLocation,
+      //   radius: 2500, // Bán kính tính bằng mét
+      // });
     }
   </script>
 
