@@ -627,25 +627,25 @@
 
 <body>
 
-  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-3" style="backdrop-filter: blur(45px)
-">
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-3"
+    style="backdrop-filter: blur(45px); background-color: rgba(255, 255, 255, 0.5);">
     <div class="container px-4 mx-auto relative">
       <nav class="nav-menu flex items-center justify-center space-x-12">
         <a href="#"
-          class="text-base font-semibold border-b-2 border-transparent hover:border-[#8C3C45] transition-colors duration-300">HOSPITALITY</a>
+          class="text-white text-base font-semibold border-b-2 border-transparent hover:border-white transition-colors duration-300">HOSPITALITY</a>
         <a href="#"
-          class="text-base font-semibold border-b-2 border-transparent hover:border-[#8C3C45] transition-colors duration-300">HOTEL</a>
-        <img src="static/Logo1.svg" alt="Villa Song Saigon">
+          class="text-white text-base font-semibold border-b-2 border-transparent hover:border-white transition-colors duration-300">HOTEL</a>
+        <img src="static/Logo.svg" alt="Villa Song Saigon">
         <a href="#"
-          class="text-base font-semibold border-b-2 border-transparent hover:border-[#8C3C45] transition-colors duration-300">SUITES</a>
+          class="text-white text-base font-semibold border-b-2 border-transparent hover:border-white transition-colors duration-300">SUITES</a>
         <a href="#"
-          class="text-base font-semibold border-b-2 border-transparent hover:border-[#8C3C45] transition-colors duration-300">CONTACT</a>
+          class="text-white text-base font-semibold border-b-2 border-transparent hover:border-white transition-colors duration-300">CONTACT</a>
       </nav>
       <!-- Thay thế div "EN" bằng dropdown language selector -->
       <div class="absolute right-0 top-[50%] translate-y-[-50%] language-selector">
         <div class="relative">
           <button id="language-button"
-            class="flex items-center gap-1 text-[#5e2a2a] hover:text-[#8C3C45] transition-colors">
+            class="flex items-center gap-1 text-white hover:text-white hover:opacity-80 transition-colors">
             <span>EN</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -654,13 +654,13 @@
             </svg>
           </button>
           <div id="language-dropdown"
-            class="absolute right-0 mt-2 w-24 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+            class="absolute right-0 mt-2 w-24 rounded-md shadow-lg bg-transparent backdrop-blur-md ring-1 ring-white ring-opacity-20 hidden">
             <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="language-button">
-              <a href="#" class="block px-4 py-2 text-sm text-[#5e2a2a] hover:bg-[#FFF7EC] hover:text-[#8C3C45]"
+              <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-white hover:bg-opacity-20 hover:text-white"
                 role="menuitem" data-lang-code="EN">English</a>
-              <a href="#" class="block px-4 py-2 text-sm text-[#5e2a2a] hover:bg-[#FFF7EC] hover:text-[#8C3C45]"
+              <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-white hover:bg-opacity-20 hover:text-white"
                 role="menuitem" data-lang-code="VI">Tiếng Việt</a>
-              <a href="#" class="block px-4 py-2 text-sm text-[#5e2a2a] hover:bg-[#FFF7EC] hover:text-[#8C3C45]"
+              <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-white hover:bg-opacity-20 hover:text-white"
                 role="menuitem" data-lang-code="FR">Français</a>
             </div>
           </div>
@@ -668,18 +668,7 @@
       </div>
     </div>
   </header>
-  <section id="hero" class="h-[100vh] py-20 overflow-hidden">
-    <div class="absolute top-[12%] right-[25%] z-10 text-center text-[96px] font-['Gilda_Display']" data-aos="fade-up"
-      data-aos-delay="300">
-      <img src="static/Logo.png" alt="Villa Song Saigon" class="mx-auto mb-6 zoom-in-effect">
-      <h1 class="leading-none">
-        <span id="typed-title" class="typing-container"></span>
-      </h1>
-    </div>
-    <img src="static/hero/Villa.png" alt="Villa Song Saigon" class="absolute h-full bottom-0 left-[-20px] z-10">
-    <img src="static/hero/River.png" alt="Villa Song Saigon" class="w-[80%] absolute bottom-0 left-[20%]">
-  </section>
-  <!-- <section id="hero-new" class="h-[100vh] py-20 overflow-hidden">
+  <!-- <section id="hero" class="h-[100vh] py-20 overflow-hidden">
     <div class="absolute top-[12%] right-[25%] z-10 text-center text-[96px] font-['Gilda_Display']" data-aos="fade-up"
       data-aos-delay="300">
       <img src="static/Logo.png" alt="Villa Song Saigon" class="mx-auto mb-6 zoom-in-effect">
@@ -690,6 +679,37 @@
     <img src="static/hero/Villa.png" alt="Villa Song Saigon" class="absolute h-full bottom-0 left-[-20px] z-10">
     <img src="static/hero/River.png" alt="Villa Song Saigon" class="w-[80%] absolute bottom-0 left-[20%]">
   </section> -->
+  <section id="hero-new"
+    class="h-[100vh] py-20 overflow-hidden relative bg-cover bg-center bg-no-repeat flex items-center"
+    style="background-image: url('./static/hero/z6549993412809_9d485f5228de45c1fb63bec56f3a415f.jpg');">
+    <div class="container mx-auto px-4 text-[96px] font-['Gilda_Display'] relative top-[-10%]">
+      <!-- <h1 class="leading-none">
+        <span id="typed-title-new" class="typing-container"></span>
+      </h1> -->
+      <div class="max-w-[900px] mx-auto">
+        <div class="flex justify-between items-center w-full mb-[-30px]" data-aos="fade-up" data-aos-delay="300"
+          data-aos-duration="800">
+          <div class="flex justify-center items-center">
+            <img src="./static/hero/Sound.svg" alt="Villa Song Saigon" data-aos="fade-down" data-aos-delay="500"
+              data-aos-duration="900">
+            <img src="./static/hero/Of.svg" alt="Villa Song Saigon" data-aos="fade-down" data-aos-delay="700"
+              data-aos-duration="900">
+          </div>
+          <img src="./static/hero/logo (1).svg" alt="Villa Song Saigon" data-aos="fade-in" data-aos-delay="1000"
+            data-aos-duration="1200">
+        </div>
+        <div class="flex justify-end items-center w-full space-x-4">
+          <img src="./static/hero/the.svg" alt="Villa Song Saigon" data-aos="fade-right" data-aos-duration="1000"
+            data-aos-delay="1200" data-aos-easing="ease-out-cubic">
+          <img src="./static/hero/Group 5.svg" alt="Villa Song Saigon" class="rotate-animation" data-aos="zoom-in"
+            data-aos-duration="1200" data-aos-delay="1500" data-aos-easing="ease-out-cubic">
+          <img src="./static/hero/river.svg" alt="Villa Song Saigon" data-aos="fade-left" data-aos-duration="1000"
+            data-aos-delay="1800" data-aos-easing="ease-out-cubic">
+        </div>
+      </div>
+
+    </div>
+  </section>
   <div class="sticky-book fixed bottom-4 right-4 z-50 hidden">
     <button
       class="book-btn rounded-full min-w-[280px] border-2 border-[#ffffff] text-white px-6 py-3 hover:bg-[#7a3636] transition-colors duration-300"
@@ -806,10 +826,10 @@
                       <div
                         class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
                         style="text-shadow: 2px 2px 2.1px #ffffff99;">
-
                         Imperial Suite
                       </div>
-                      <img src="./static/rooms/image12.png" alt="Luxury Suite 1">
+                      <img src="./static/rooms/image12.png" alt="Luxury Suite 1"
+                        style="width: 100%; height: auto; aspect-ratio: 960/1257; object-fit: cover;">
                     </div>
                     <div class="relative">
                       <div
@@ -817,24 +837,26 @@
                         style="text-shadow: 2px 2px 2.1px #ffffff99;">
                         Sanctuary Suite
                       </div>
-                      <img src="./static/rooms/image.png" alt="Luxury Suite 2">
+                      <img src="./static/rooms/image.png" alt="Luxury Suite 2"
+                        style="width: 100%; height: auto; aspect-ratio: 960/1257; object-fit: cover;">
                     </div>
                     <div class="relative">
                       <div
                         class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
                         style="text-shadow: 2px 2px 2.1px #ffffff99;">
-                        River Suite
+                        Villa Suite
                       </div>
-                      <img src="./static/rooms/image31.png" alt="Luxury Suite 2">
+                      <img src="./static/rooms/2025-04-28 14.18.53.jpg" alt="Luxury Suite 3"
+                        style="width: 100%; height: auto; aspect-ratio: 960/1257; object-fit: cover;">
                     </div>
                     <div class="relative">
                       <div
                         class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
                         style="text-shadow: 2px 2px 2.1px #ffffff99;">
-                        Executive Suite
+                        Art Suite
                       </div>
-                      <img src="https://placehold.co/960x1257" alt="Luxury Suite 2">
-
+                      <img src="https://placehold.co/960x1257" alt="Luxury Suite 4"
+                        style="width: 100%; height: auto; aspect-ratio: 960/1257; object-fit: cover;">
                     </div>
                   </div>
                 </div>
@@ -949,47 +971,6 @@
                                 d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            Single
-                          </li>
-                          <li class="flex items-center gap-2 text-[#18181B]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
-                              fill="none">
-                              <path
-                                d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
-                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            21-30 sqm
-                          </li>
-                          <li class="flex items-center gap-2 text-[#18181B]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
-                              fill="none">
-                              <path
-                                d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
-                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            Garden/Pool
-                          </li>
-                        </ul>
-                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Our most luxurious suite, the
-                          Imperial
-                          Suite
-                          offers two
-                          private balconies
-                          with sweeping views of the pool and river, as well as a spacious parlor. It's a sanctuary of
-                          quiet luxury for discerning guests seeking the finest in comfort and charm.</p>
-                      </div>
-                    </div>
-
-                    <div>
-                      <div class="flex justify-between gap-2 items-end">
-                        <ul class="space-y-2">
-                          <li class="flex items-center gap-2 text-[#18181B]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
-                              fill="none">
-                              <path
-                                d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
-                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
                             Double
                           </li>
                           <li class="flex items-center gap-2 text-[#18181B]">
@@ -999,7 +980,7 @@
                                 d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            25-35 sqm
+                            105 sqm
                           </li>
                           <li class="flex items-center gap-2 text-[#18181B]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
@@ -1008,15 +989,13 @@
                                 d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            River View
+                            2 Balconies, separate Parlor (Pool and River view)
                           </li>
                         </ul>
-                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">The Sanctuary Suite offers a peaceful
-                          retreat
-                          with elegant
-                          furnishings and a
-                          private balcony overlooking our lush garden. Perfect for those seeking tranquility and
-                          comfort.
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Our most luxurious suite, the
+                          Our most luxurious suite, the Imperial Suite offers two private balconies with sweeping views
+                          of the pool and river, as well as a spacious parlor. Its a sanctuary of quiet luxury for
+                          discerning guests seeking the finest in comfort and charm.
                         </p>
                       </div>
                     </div>
@@ -1040,7 +1019,7 @@
                                 d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            25-35 sqm
+                            75 sqm
                           </li>
                           <li class="flex items-center gap-2 text-[#18181B]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
@@ -1049,17 +1028,89 @@
                                 d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            Pool/Garden
+                            Largest Balcony and Bathtub, separate Parlor (River view)
                           </li>
                         </ul>
-                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">The Executive Suite offers the
-                          ultimate
-                          in
-                          luxury with a
-                          spacious layout,
-                          premium furnishings, and exclusive amenities. Enjoy views of our beautiful pool and garden
-                          area
-                          from your private balcony.</p>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">The Sanctuary Suite offers a peaceful
+                          retreat with elegant furnishings and the largest balcony overlooking the river side. Perfect
+                          for those seeking tranquility and comfort.
+
+                        </p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between gap-2 items-end">
+                        <ul class="space-y-2">
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Double
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            61 sqm
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            River view
+                          </li>
+                        </ul>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">With a graceful dome-roofed parlor
+                          and wide river views, the Art Suite offers a bright, elegant space perfect for relaxation.
+                          Guests can also connect to a Sanctuary River Room for an extended stay.
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between gap-2 items-end">
+                        <ul class="space-y-2">
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Double
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            71 sqm
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            River view
+                          </li>
+                        </ul>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">The Villa Suite boasts sweeping river
+                          views and a serene ambiance, with the option to adjoin a Sanctuary Room via a charming shared
+                          balcony — ideal for couples or families seeking extra space.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -1074,33 +1125,37 @@
                       <div
                         class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
                         style="text-shadow: 2px 2px 2.1px #ffffff99;">
-                        Deluxe Room
+                        WRITER'S ROOM
                       </div>
-                      <img src="./static/rooms/image12.png" alt="Deluxe Room">
+                      <img src="./static/rooms/2025-04-28 14.50.34.jpg" alt="WRITER'S ROOM"
+                        style="width: 100%; height: auto; aspect-ratio: 960/1257; object-fit: cover;">
                     </div>
                     <div class="relative">
                       <div
                         class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
                         style="text-shadow: 2px 2px 2.1px #ffffff99;">
-                        Superior Room
+                        VILLA ROOM
                       </div>
-                      <img src="./static/rooms/image.png" alt="Superior Room">
+                      <img src="./static/rooms/2025-04-28 14.51.06.jpg" alt="VILLA ROOM"
+                        style="width: 100%; height: auto; aspect-ratio: 960/1257; object-fit: cover;">
                     </div>
                     <div class="relative">
                       <div
                         class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
                         style="text-shadow: 2px 2px 2.1px #ffffff99;">
-                        Garden Room
+                        SANCTUARY ROOM
                       </div>
-                      <img src="./static/rooms/image31.png" alt="Garden Room">
+                      <img src="./static/rooms/2025-04-28 14.51.15.jpg" alt="SANCTUARY ROOM"
+                        style="width: 100%; height: auto; aspect-ratio: 960/1257; object-fit: cover;">
                     </div>
                     <div class="relative">
                       <div
                         class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
                         style="text-shadow: 2px 2px 2.1px #ffffff99;">
-                        River Room
+                        SANCTUARY RIVER ROOM
                       </div>
-                      <img src="https://placehold.co/960x1257" alt="River Room">
+                      <img src="./static/rooms/2025-04-28 14.51.21.jpg" alt="SANCTUARY RIVER ROOM"
+                        style="width: 100%; height: auto; aspect-ratio: 960/1257; object-fit: cover;">
                     </div>
                   </div>
                 </div>
@@ -1146,7 +1201,7 @@
                                 d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            King/Twin
+                            Single
                           </li>
                           <li class="flex items-center gap-2 text-[#18181B]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
@@ -1155,7 +1210,7 @@
                                 d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            35-40 sqm
+                            21-30 sqm
                           </li>
                           <li class="flex items-center gap-2 text-[#18181B]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
@@ -1164,13 +1219,13 @@
                                 d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            City View
+                            Garden/Pool view
                           </li>
                         </ul>
-                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Our Deluxe Rooms offer a perfect
-                          blend of comfort and elegance. Each room features premium bedding, a spacious bathroom with
-                          rain shower, and large windows that frame stunning city views. Modern amenities ensure a
-                          seamless stay.</p>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Bathed in natural light, the Writer’s
+                          Room offers a cozy retreat with views of the garden or pool. Perfect for solo travelers
+                          seeking comfort, quiet inspiration, and colonial charm.
+                        </p>
                       </div>
                     </div>
 
@@ -1184,7 +1239,7 @@
                                 d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            King/Twin
+                            Double/Twin
                           </li>
                           <li class="flex items-center gap-2 text-[#18181B]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
@@ -1193,7 +1248,7 @@
                                 d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            30-35 sqm
+                            26-41 sqm
                           </li>
                           <li class="flex items-center gap-2 text-[#18181B]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
@@ -1202,12 +1257,13 @@
                                 d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            Garden View
+                            Garden/Pool view
                           </li>
                         </ul>
-                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Superior Rooms offer enhanced comfort
-                          with additional space and premium amenities. Each room features a private balcony overlooking
-                          our tranquil garden, creating a peaceful retreat after a day of exploring Saigon.</p>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">The Villa Room blends classic
+                          elegance with modern comfort, featuring garden or pool views. Ideal for couples or friends, it
+                          offers a warm and inviting space to unwind.
+                        </p>
                       </div>
                     </div>
 
@@ -1221,7 +1277,7 @@
                                 d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            King
+                            Double
                           </li>
                           <li class="flex items-center gap-2 text-[#18181B]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
@@ -1230,7 +1286,45 @@
                                 d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
                                 stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            25-30 sqm
+                            26-41 sqm
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Private Balcony (Pool view/ Facing) or Garden Terrace
+                          </li>
+                        </ul>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Spacious and serene, the Sanctuary
+                          Room includes a private balcony overlooking the pool or garden terrace. A tranquil hideaway
+                          for those who appreciate both space and style.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between gap-2 items-end">
+                        <ul class="space-y-2">
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Double
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            32-48 sqm
                           </li>
                           <li class="flex items-center gap-2 text-[#18181B]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
@@ -1242,48 +1336,10 @@
                             River View
                           </li>
                         </ul>
-                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Our Garden Rooms provide direct
-                          access to our lush tropical gardens. Wake up to the sounds of nature and enjoy your morning
-                          coffee on your private terrace surrounded by exotic plants and flowers. These rooms offer a
-                          unique connection to Vietnam's natural beauty.</p>
-                      </div>
-                    </div>
-
-                    <div>
-                      <div class="flex justify-between gap-2 items-end">
-                        <ul class="space-y-2">
-                          <li class="flex items-center gap-2 text-[#18181B]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
-                              fill="none">
-                              <path
-                                d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
-                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            King
-                          </li>
-                          <li class="flex items-center gap-2 text-[#18181B]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
-                              fill="none">
-                              <path
-                                d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
-                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            30-35 sqm
-                          </li>
-                          <li class="flex items-center gap-2 text-[#18181B]">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
-                              fill="none">
-                              <path
-                                d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
-                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            River View
-                          </li>
-                        </ul>
-                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Our River Rooms offer breathtaking
-                          views of the Saigon River. Watch as boats glide by from your private balcony while enjoying
-                          the changing colors of sunrise or sunset. These rooms combine elegant comfort with one of the
-                          most picturesque views in the city.</p>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">With sweeping views of the Saigon
+                          River, the Sanctuary River Room brings a sense of calm and luxury. Perfect for guests who wish
+                          to wake up to the beauty of the riverside every morning.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -3607,6 +3663,24 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqJSGdEAuuq5SBbDmuAaQN4VQgkWl9Vr0&callback=initMap"
     async defer></script>
 
+  <style>
+    .rotate-animation {
+      animation: rotateIn 1.5s ease-out forwards;
+      transform-origin: center;
+    }
+
+    @keyframes rotateIn {
+      0% {
+        transform: rotate(-180deg) scale(0.5);
+        opacity: 0;
+      }
+
+      100% {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
 
 </body>
 
