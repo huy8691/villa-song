@@ -635,7 +635,7 @@
   <header id="main-header" class="absolute top-0 left-0 right-0 z-50 py-3"
     style="backdrop-filter: blur(45px); background-color: rgba(255, 255, 255, 0.5); transition: opacity 0.5s;">
     <div class="container px-4 mx-auto relative">
-      <nav class="nav-menu flex items-center justify-center space-x-12">
+      <nav class="nav-menu flex items-center justify-center space-x-16">
         <a href="#"
           class="text-white text-base font-semibold border-b-2 border-transparent hover:border-white transition-colors duration-300">HOSPITALITY</a>
         <a href="#"
@@ -1559,10 +1559,13 @@
     </div>
   </div>
 
-  <footer class="min-h-[80vh] flex flex-col"
-    style="background-image: url('static/footer/2025-04-28\ 16.50.57.jpg'); background-size: cover; background-position: center;">
+  <footer class="min-h-[80vh] flex flex-col relative"
+    style="background-image: url('static/footer/484024578_642302081726926_4525145586751917371_n.jpg'); background-size: cover; background-position: center;">
 
-    <div class="flex-1 flex flex-col justify-center py-4 relative">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-[#FFE2BD] opacity-50"></div>
+
+    <div class="flex-1 flex flex-col justify-center py-4 relative z-10">
       <div class="container mx-auto px-4">
         <div class="max-w-[400px] rounded-md overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
           <div class="px-8 py-12"
@@ -1575,7 +1578,7 @@
                 <a href="tel:+842837446090">+84 28 3744 6090</a>
               </div>
               <div class="footer-address text-sm">
-                197/2 Nguyễn Văn Hưởng Street, Thảo Điền Ward (District 2), Thủ Đức City, Hồ Chí Minh City, Vietnam
+                197/2 Nguyen Van Huong, Thao Dien Ward (District 2), Ho Chi Minh City, Vietnam
               </div>
             </div>
             <div class="flex gap-8 flex-col">
@@ -1585,12 +1588,11 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
     <div
       style="backdrop-filter: blur(45px); -webkit-backdrop-filter: blur(45px); background-color: rgba(255, 255, 255, 0.6);"
-      class="py-4">
+      class="py-4 relative z-10">
       <div class="container mx-auto px-4 flex justify-between gap-4 items-center">
         <div class="flex gap-4 items-center">
           <img src="static/Logo1.svg" alt="Villa Song Saigon" class="w-10">
@@ -1623,6 +1625,7 @@
           </a>
         </div>
       </div>
+    </div>
   </footer>
 
   <!-- Thêm script AOS ở cuối body, trước các script khác -->
@@ -3686,7 +3689,7 @@
   </script>
 
   <!-- Tải Google Maps JavaScript API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqJSGdEAuuq5SBbDmuAaQN4VQgkWl9Vr0&callback=initMap"
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGV7CpvG0OpnyGzaJiJ4rHWS43yXJQ9sc&callback=initMap"
     async defer></script>
 
   <style>
