@@ -173,6 +173,20 @@
       font-size: 18px;
     }
 
+    .rooms-slider-1 {
+      padding: 0 50px;
+    }
+
+    .rooms-slider-1-prev {
+      left: -20px;
+      font-size: 18px;
+    }
+
+    .rooms-slider-1-next {
+      right: -20px;
+      font-size: 18px;
+    }
+
     /* CSS cho hiệu ứng bánh xe năm */
     .ios-picker-container {
       background-color: transparent;
@@ -572,33 +586,6 @@
 
   <script>
     jQuery(document).ready(function () {
-      // Khởi tạo Slick slider (nếu chưa được khởi tạo)
-      if (!$('.suites-slider-1').hasClass('slick-initialized')) {
-        $('.suites-slider-1').slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: true,
-          centerMode: true,
-          centerPadding: '0px',
-          infinite: true,
-          responsive: [
-            {
-              breakpoint: 992,
-              settings: {
-                slidesToShow: 2
-              }
-            },
-            {
-              breakpoint: 576,
-              settings: {
-                slidesToShow: 1
-              }
-            }
-          ]
-        });
-      }
-
       // Xử lý hiệu ứng parallax khi di chuột
       $('.organic-parallax-item').on('mousemove', function (e) {
         const item = $(this);
@@ -1000,7 +987,228 @@
               </div>
             </div>
             <div id="rooms-tab" class="tab-pane hidden">
-              <p>Rooms Content</p>
+              <div class="flex gap-10">
+                <div class="w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                  <div class="rooms-slider">
+                    <div class="relative">
+                      <div
+                        class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
+                        style="text-shadow: 2px 2px 2.1px #ffffff99;">
+                        Deluxe Room
+                      </div>
+                      <img src="./static/rooms/image12.png" alt="Deluxe Room">
+                    </div>
+                    <div class="relative">
+                      <div
+                        class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
+                        style="text-shadow: 2px 2px 2.1px #ffffff99;">
+                        Superior Room
+                      </div>
+                      <img src="./static/rooms/image.png" alt="Superior Room">
+                    </div>
+                    <div class="relative">
+                      <div
+                        class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
+                        style="text-shadow: 2px 2px 2.1px #ffffff99;">
+                        Garden Room
+                      </div>
+                      <img src="./static/rooms/image31.png" alt="Garden Room">
+                    </div>
+                    <div class="relative">
+                      <div
+                        class="absolute top-[50%] w-full p-4 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#8C3C45] text-center font-['Gilda_Display'] text-[64px] font-normal leading-normal tracking-[-1.6px] uppercase"
+                        style="text-shadow: 2px 2px 2.1px #ffffff99;">
+                        River Room
+                      </div>
+                      <img src="https://placehold.co/960x1257" alt="River Room">
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 pt-[80px]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                  <div class="rooms-slider-1 mb-[50px] mt-[50px]">
+                    <div class="organic-parallax-item">
+                      <div class="organic-shape">
+                        <div class="parallax-content">
+                          <img src="./static/rooms/image.png" alt="Deluxe Room Detail">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="organic-parallax-item">
+                      <div class="organic-shape">
+                        <div class="parallax-content">
+                          <img src="./static/rooms/302_Sanctuary_Room_2.avif" alt="Superior Room Detail">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="organic-parallax-item">
+                      <div class="organic-shape">
+                        <div class="parallax-content">
+                          <img src="./static/rooms/102.avif" alt="Garden Room Detail">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="organic-parallax-item">
+                      <div class="organic-shape">
+                        <div class="parallax-content">
+                          <img src="https://placehold.co/600x400" alt="River Room Detail">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rooms-slider-2 text-sm">
+                    <div>
+                      <div class="flex justify-between gap-2 items-end">
+                        <ul class="space-y-2">
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            King/Twin
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            35-40 sqm
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            City View
+                          </li>
+                        </ul>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Our Deluxe Rooms offer a perfect
+                          blend of comfort and elegance. Each room features premium bedding, a spacious bathroom with
+                          rain shower, and large windows that frame stunning city views. Modern amenities ensure a
+                          seamless stay.</p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between gap-2 items-end">
+                        <ul class="space-y-2">
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            King/Twin
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            30-35 sqm
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Garden View
+                          </li>
+                        </ul>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Superior Rooms offer enhanced comfort
+                          with additional space and premium amenities. Each room features a private balcony overlooking
+                          our tranquil garden, creating a peaceful retreat after a day of exploring Saigon.</p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between gap-2 items-end">
+                        <ul class="space-y-2">
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            King
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            25-30 sqm
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            River View
+                          </li>
+                        </ul>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Our Garden Rooms provide direct
+                          access to our lush tropical gardens. Wake up to the sounds of nature and enjoy your morning
+                          coffee on your private terrace surrounded by exotic plants and flowers. These rooms offer a
+                          unique connection to Vietnam's natural beauty.</p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between gap-2 items-end">
+                        <ul class="space-y-2">
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M2 14.0644V8.73104C2 8.37742 2.14048 8.03828 2.39052 7.78823C2.64057 7.53818 2.97971 7.39771 3.33333 7.39771M3.33333 7.39771H12.6667M3.33333 7.39771V4.73104C3.33333 4.37742 3.47381 4.03828 3.72386 3.78823C3.97391 3.53818 4.31304 3.39771 4.66667 3.39771H11.3333C11.687 3.39771 12.0261 3.53818 12.2761 3.78823C12.5262 4.03828 12.6667 4.37742 12.6667 4.73104V7.39771M12.6667 7.39771C13.0203 7.39771 13.3594 7.53818 13.6095 7.78823C13.8595 8.03828 14 8.37742 14 8.73104V14.0644M2 12.731H14"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            King
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M4.9998 7.73101L6.33314 9.06434M6.9998 5.73101L8.33314 7.06434M8.9998 3.73101L10.3331 5.06434M2.9998 9.73101L4.33314 11.0643M14.1998 6.53101L5.7998 14.931C5.13314 15.5977 4.13314 15.5977 3.53314 14.931L1.7998 13.1977C1.13314 12.531 1.13314 11.531 1.7998 10.931L10.1998 2.53101C10.8665 1.86434 11.8665 1.86434 12.4665 2.53101L14.1998 4.26434C14.8665 4.93101 14.8665 5.93101 14.1998 6.53101Z"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            30-35 sqm
+                          </li>
+                          <li class="flex items-center gap-2 text-[#18181B]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17"
+                              fill="none">
+                              <path
+                                d="M1.33301 4.73088C1.73301 5.06421 2.13301 5.39754 2.99967 5.39754C4.66634 5.39754 4.66634 4.06421 6.33301 4.06421C8.06634 4.06421 7.93301 5.39754 9.66634 5.39754C11.333 5.39754 11.333 4.06421 12.9997 4.06421C13.8663 4.06421 14.2663 4.39754 14.6663 4.73088M1.33301 8.73088C1.73301 9.06421 2.13301 9.39754 2.99967 9.39754C4.66634 9.39754 4.66634 8.06421 6.33301 8.06421C8.06634 8.06421 7.93301 9.39754 9.66634 9.39754C11.333 9.39754 11.333 8.06421 12.9997 8.06421C13.8663 8.06421 14.2663 8.39754 14.6663 8.73088M1.33301 12.7309C1.73301 13.0642 2.13301 13.3975 2.99967 13.3975C4.66634 13.3975 4.66634 12.0642 6.33301 12.0642C8.06634 12.0642 7.93301 13.3975 9.66634 13.3975C11.333 13.3975 11.333 12.0642 12.9997 12.0642C13.8663 12.0642 14.2663 12.3975 14.6663 12.7309"
+                                stroke="#09090B" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            River View
+                          </li>
+                        </ul>
+                        <p class="text-right text-[#18181B] max-w-[363px] text-sm">Our River Rooms offer breathtaking
+                          views of the Saigon River. Watch as boats glide by from your private balcony while enjoying
+                          the changing colors of sunrise or sunset. These rooms combine elegant comfort with one of the
+                          most picturesque views in the city.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1215,7 +1423,7 @@
 
     <div class="flex-1 flex flex-col justify-center py-4">
       <div class="container mx-auto px-4">
-        <div class="max-w-[400px] ml-[10%]" data-aos="fade-up" data-aos-duration="1000">
+        <div class="max-w-[400px]" data-aos="fade-up" data-aos-duration="1000">
           <div class="px-8 py-12"
             style="backdrop-filter: blur(80px); -webkit-backdrop-filter: blur(80px);background-color: rgba(255, 255, 255, 0.5);">
             <div class="mb-8">
@@ -1239,7 +1447,9 @@
 
       </div>
     </div>
-    <div style="backdrop-filter: blur(45px); -webkit-backdrop-filter: blur(45px);" class="py-4">
+    <div
+      style="backdrop-filter: blur(45px); -webkit-backdrop-filter: blur(45px); background-color: rgba(255, 255, 255, 0.6);"
+      class="py-4">
       <div class="container mx-auto px-4 flex justify-between gap-4 items-center">
         <div class="flex gap-4 items-center">
           <img src="static/Logo1.svg" alt="Villa Song Saigon" class="w-10">
@@ -1739,7 +1949,7 @@
 
       const videoSection = document.querySelector('.video-intro');
       const video = videoSection.querySelector('video');
-      const initialWidth = 170; // Chiều rộng ban đầu nhỏ
+      const initialWidth = 200; // Chiều rộng ban đầu nhỏ
       const maxWidth = window.innerWidth; // Chiều rộng đầy đủ khi mở rộng
 
       function scaleVideo() {
@@ -1750,7 +1960,7 @@
         if (videoRect.top < windowHeight && videoRect.bottom > 0) {
           // Tính toán phần trăm của video trong khung nhìn
           const scrollPosition = windowHeight - videoRect.top;
-          const scrollRange = videoRect.height * 0.6; // Tăng khoảng cách cuộn để đạt 100% chiều rộng khi hiển thị 60%
+          const scrollRange = videoRect.height * 0.8; // Tăng khoảng cách cuộn để đạt 100% chiều rộng khi hiển thị 60%
           const videoVisiblePercentage = Math.min(Math.max(scrollPosition / scrollRange, 0), 1);
 
           // Tính toán chiều rộng mới dựa trên phần trăm trong khung nhìn
@@ -1768,6 +1978,10 @@
     document.addEventListener('DOMContentLoaded', function () {
       const tabLinks = document.querySelectorAll('.tab-link');
       const tabPanes = document.querySelectorAll('.tab-pane');
+
+      // Khởi tạo slider cho tab active ban đầu
+      initActiveTabSliders();
+
       tabLinks.forEach(link => {
         link.addEventListener('click', function () {
           const targetTab = this.getAttribute('data-tab');
@@ -1806,41 +2020,104 @@
           const activePane = document.getElementById(targetTab);
           activePane.classList.remove('hidden');
           activePane.classList.add('active');
+
+          // Hủy và khởi tạo lại sliders cho tab active
+          destroyAllSliders();
+          initActiveTabSliders();
         });
       });
-      $('.suites-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.suites-slider-1, .suites-slider-2',
-        autoplay: true,
-        autoplaySpeed: 5000,
-      });
 
-      // Khởi tạo slider thứ hai
-      $('.suites-slider-1').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        asNavFor: '.suites-slider, .suites-slider-2',
-        dots: false,
-        arrows: true,
-        fade: true,
-        prevArrow: '<button type="button" class="suites-slider-1-prev custom-arrow">PREV</button>',
-        nextArrow: '<button type="button" class="suites-slider-1-next custom-arrow">NEXT</button>'
-      });
+      // Hàm hủy tất cả sliders
+      function destroyAllSliders() {
+        if ($('.suites-slider').hasClass('slick-initialized')) {
+          $('.suites-slider').slick('unslick');
+        }
+        if ($('.suites-slider-1').hasClass('slick-initialized')) {
+          $('.suites-slider-1').slick('unslick');
+        }
+        if ($('.suites-slider-2').hasClass('slick-initialized')) {
+          $('.suites-slider-2').slick('unslick');
+        }
+        if ($('.rooms-slider').hasClass('slick-initialized')) {
+          $('.rooms-slider').slick('unslick');
+        }
+        if ($('.rooms-slider-1').hasClass('slick-initialized')) {
+          $('.rooms-slider-1').slick('unslick');
+        }
+        if ($('.rooms-slider-2').hasClass('slick-initialized')) {
+          $('.rooms-slider-2').slick('unslick');
+        }
+      }
 
-      $('.suites-slider-2').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        asNavFor: '.suites-slider, .suites-slider-1',
-        dots: false,
-        arrows: false,
-        fade: true,
-      });
+      // Hàm khởi tạo sliders cho tab active
+      function initActiveTabSliders() {
+        // Kiểm tra tab nào đang active
+        if ($('#suites').hasClass('active')) {
+          // Khởi tạo sliders cho tab Suites
+          $('.suites-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.suites-slider-1, .suites-slider-2',
+            autoplay: true,
+            autoplaySpeed: 5000,
+          });
 
-      // Khởi tạo slider thứ ba
+          $('.suites-slider-1').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.suites-slider, .suites-slider-2',
+            dots: false,
+            arrows: true,
+            fade: true,
+            prevArrow: '<button type="button" class="suites-slider-1-prev custom-arrow">PREV</button>',
+            nextArrow: '<button type="button" class="suites-slider-1-next custom-arrow">NEXT</button>'
+          });
 
+          $('.suites-slider-2').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.suites-slider, .suites-slider-1',
+            dots: false,
+            arrows: false,
+            fade: true,
+          });
+        }
+
+        if ($('#rooms-tab').hasClass('active')) {
+          // Khởi tạo sliders cho tab Rooms
+          $('.rooms-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.rooms-slider-1, .rooms-slider-2',
+            autoplay: true,
+            autoplaySpeed: 5000,
+          });
+
+          $('.rooms-slider-1').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.rooms-slider, .rooms-slider-2',
+            dots: false,
+            arrows: true,
+            fade: true,
+            prevArrow: '<button type="button" class="rooms-slider-1-prev custom-arrow">PREV</button>',
+            nextArrow: '<button type="button" class="rooms-slider-1-next custom-arrow">NEXT</button>'
+          });
+
+          $('.rooms-slider-2').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.rooms-slider, .rooms-slider-1',
+            dots: false,
+            arrows: false,
+            fade: true,
+          });
+        }
+      }
     });
 
   </script>
@@ -3101,33 +3378,43 @@
       // Hiển thị info window khi trang tải xong
       mainInfoWindow.open(map, mainMarker);
 
+      // Thêm sự kiện click cho marker chính để mở lại info window khi click
+      mainMarker.addListener('click', function () {
+        mainInfoWindow.open(map, mainMarker);
+      });
+
       // Các địa điểm xung quanh (với tọa độ thực tế)
       const landmarks = [
         {
           position: { lat: 10.8025, lng: 106.7319 },
-          icon: './static/Map/image-1.png',
-          title: 'Thảo Điền Pearl'
+          icon: './static/Map/thao dien.png',
+          title: 'Thao Dien Pearl',
+          description: 'Luxury residential complex in Thao Dien'
         },
         {
           position: { lat: 10.8036, lng: 106.7392 },
-          icon: './static/Map/image-2.png',
-          title: 'Vincom Mega Mall Thảo Điền'
+          icon: './static/Map/vincom.png',
+          title: 'Vincom Mega Mall Thao Dien',
+          description: 'Largest shopping mall in Thao Dien area'
         },
         {
-          position: { lat: 10.7982, lng: 106.7347 },
-          icon: './static/Map/image-3.png',
-          title: 'Gateway Thảo Điền'
+          position: { lat: 10.8004353, lng: 106.7337304 },
+          icon: './static/Map/Gateway.png',
+          title: 'Metro Line 1 - Thao Dien Station',
+          description: 'Underground metro station of Line 1'
         },
         {
-          position: { lat: 10.7950, lng: 106.7320 },
-          icon: './static/Map/image-4.png',
-          title: 'Saigon Pearl'
+          position: { lat: 10.8017336, lng: 106.7481101 },
+          icon: './static/Map/estella.png',
+          title: 'Estella Heights',
+          description: 'Premium residential complex with world-class amenities'
         },
         {
-          position: { lat: 10.7990, lng: 106.7420 },
-          icon: './static/Map/image-5.png',
-          title: 'Metro Số 1 - Ga Thảo Điền'
-        }
+          position: { lat: 10.8002009, lng: 106.7432144 },
+          icon: './static/Map/mega.png',
+          title: 'MM Mega Market An Phu',
+          description: 'Wholesale supermarket with diverse products'
+        },
       ];
 
       // Thêm các marker cho các địa điểm xung quanh
@@ -3143,6 +3430,43 @@
           },
           title: landmark.title
         });
+
+        // Tạo info window cho mỗi landmark
+        const infoContent = `
+          <div class="rounded-lg shadow-md p-2">
+            <h3 class="font-bold text-base font-['Gilda_Display']">${landmark.title}</h3>
+            <p class="text-sm text-[#18181B] mt-1">${landmark.description}</p>
+          </div>
+        `;
+
+        const infoWindow = new google.maps.InfoWindow({
+          content: infoContent,
+          disableAutoPan: true
+        });
+
+        // Hiển thị info window khi hover vào marker
+        marker.addListener('mouseover', function () {
+          infoWindow.open(map, marker);
+        });
+
+        // Ẩn info window khi di chuột ra khỏi marker
+        marker.addListener('mouseout', function () {
+          infoWindow.close();
+        });
+
+        // Hiển thị info window khi click vào marker
+        marker.addListener('click', function () {
+          // Đóng tất cả các info window khác trước khi mở cái mới
+          landmarks.forEach(l => {
+            if (l.infoWindow && l.infoWindow !== infoWindow) {
+              l.infoWindow.close();
+            }
+          });
+          infoWindow.open(map, marker);
+        });
+
+        // Lưu infoWindow vào landmark để có thể tham chiếu sau này
+        landmark.infoWindow = infoWindow;
       });
 
       // Thêm hiệu ứng vòng tròn mờ xung quanh vị trí chính
