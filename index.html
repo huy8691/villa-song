@@ -623,6 +623,11 @@
       font-size: 14px;
     }
   </style>
+  <style>
+    .sticky-book {
+      transition: bottom 0.3s ease;
+    }
+  </style>
 </head>
 
 <body>
@@ -1557,7 +1562,7 @@
   <footer class="min-h-[80vh] flex flex-col"
     style="background-image: url('static/footer/2025-04-28\ 16.50.57.jpg'); background-size: cover; background-position: center;">
 
-    <div class="flex-1 flex flex-col justify-center py-4">
+    <div class="flex-1 flex flex-col justify-center py-4 relative">
       <div class="container mx-auto px-4">
         <div class="max-w-[400px] rounded-md overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
           <div class="px-8 py-12"
@@ -1582,7 +1587,6 @@
         </div>
 
       </div>
-
     </div>
     <div
       style="backdrop-filter: blur(45px); -webkit-backdrop-filter: blur(45px); background-color: rgba(255, 255, 255, 0.6);"
@@ -3716,6 +3720,26 @@
         header.style.opacity = 1;
         header.style.transition = 'opacity 0.5s ease-in';
       }
+    });
+  </script>
+
+  <script>
+    window.addEventListener('load', function () {
+      const button2 = document.querySelector('.sticky-book');
+
+      function adjustButtonPosition() {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        if (documentHeight - scrollPosition <= 80) {
+          button2.style.bottom = '85px';
+        } else {
+          button2.style.bottom = '16px'; // Vị trí mặc định
+        }
+      }
+
+      window.addEventListener('scroll', adjustButtonPosition);
+      window.addEventListener('resize', adjustButtonPosition);
     });
   </script>
 
