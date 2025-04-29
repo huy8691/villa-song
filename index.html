@@ -1483,7 +1483,8 @@
 
 
   </div>
-  <section class="moments min-h-[100vh] flex relative" style="position: relative; overflow: hidden;">
+  <section class="moments min-h-[100vh] flex relative" style="position: relative; overflow: hidden; background: #FFE2BD"
+    );>
     <video autoplay muted loop playsinline preload="auto" class="absolute top-0 left-0 w-full h-full object-cover z-0"
       style="will-change: transform; backface-visibility: hidden;">
       <source src="./static/video/Flyer.mp4" type="video/mp4" media="all">
@@ -1495,13 +1496,14 @@
       <div class="flex flex-col justify-center h-full">
         <h2
           class="font-['Gilda_Display'] max-w-[50%] w-full text-right font-normal text-[96px] leading-[130%] tracking-normal uppercase mb-[15vh]"
-          data-aos="fade-up" data-aos-duration="1000">
+          data-aos="fade-up" data-aos-duration="1000" style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);">
           Moments<br>That
         </h2>
         <h2
           class="font-['Gilda_Display'] flex ml-auto max-w-[50%] w-full font-normal text-[96px] leading-[130%] tracking-normal uppercase text-right"
-          data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-          Stay With</br>You
+          data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+          style="text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);">
+          Stay With<br>You
         </h2>
       </div>
     </div>
@@ -1575,90 +1577,50 @@
         </div>
       </div>
     </div>
-    <!-- <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4">
       <div class="dining-slider-text max-w-[500px] mx-auto text-center">
         <div>
           <h2 class="text-center text-[#8C3C45] font-['Gilda_Display'] text-[32px] font-normal mb-4 uppercase">
             RIVERSIDE DINING</h2>
-          <div class="description-dining text-sm text-[#18181B]">
-            Savor elegant meals by the Saigon River, where every dish is paired with serene waterside views and the
-            soft glow of sunset.
-          </div>
         </div>
         <div>
           <h2 class="text-center text-[#8C3C45] font-['Gilda_Display'] text-[32px] font-normal mb-4 uppercase">
             Hotel & Residents</h2>
-          <div class="description-dining text-sm text-[#18181B]">
-            Experience refined living and heartfelt hospitality, where every detail is thoughtfully curated to offer
-            comfort, privacy, and timeless charm.
-          </div>
         </div>
         <div>
           <h2 class="text-center text-[#8C3C45] font-['Gilda_Display'] text-[32px] font-normal mb-4 uppercase">
             Suites & Room</h2>
-          <div class="description-dining text-sm text-[#18181B]">
-            Immerse yourself in timeless elegance and comfort, where each room and suite offers a serene retreat
-            blending colonial charm with modern luxury.
-          </div>
         </div>
         <div>
           <h2 class="text-center text-[#8C3C45] font-['Gilda_Display'] text-[32px] font-normal mb-4 uppercase">
             RIVERSIDE DINING</h2>
-          <div class="description-dining text-sm text-[#18181B]">
-            Savor elegant meals by the Saigon River, where every dish is paired with serene waterside views and the
-            soft glow of sunset.
-          </div>
         </div>
         <div>
           <h2 class="text-center text-[#8C3C45] font-['Gilda_Display'] text-[32px] font-normal mb-4 uppercase">
             Hotel & Residents</h2>
-          <div class="description-dining text-sm text-[#18181B]">
-            Experience refined living and heartfelt hospitality, where every detail is thoughtfully curated to offer
-            comfort, privacy, and timeless charm.
-          </div>
         </div>
         <div>
           <h2 class="text-center text-[#8C3C45] font-['Gilda_Display'] text-[32px] font-normal mb-4 uppercase">
             Suites & Room</h2>
-          <div class="description-dining text-sm text-[#18181B]">
-            Immerse yourself in timeless elegance and comfort, where each room and suite offers a serene retreat
-            blending colonial charm with modern luxury.
-          </div>
         </div>
         <div>
           <h2 class="text-center text-[#8C3C45] font-['Gilda_Display'] text-[32px] font-normal mb-4 uppercase">
             RIVERSIDE DINING</h2>
-          <div class="description-dining text-sm text-[#18181B]">
-            Savor elegant meals by the Saigon River, where every dish is paired with serene waterside views and the
-            soft glow of sunset.
-          </div>
         </div>
         <div>
           <h2 class="text-center text-[#8C3C45] font-['Gilda_Display'] text-[32px] font-normal mb-4 uppercase">
             Hotel & Residents</h2>
-          <div class="description-dining text-sm text-[#18181B]">
-            Experience refined living and heartfelt hospitality, where every detail is thoughtfully curated to offer
-            comfort, privacy, and timeless charm.
-          </div>
         </div>
         <div>
           <h2 class="text-center text-[#8C3C45] font-['Gilda_Display'] text-[32px] font-normal mb-4 uppercase">
             Suites & Room</h2>
-          <div class="description-dining text-sm text-[#18181B]">
-            Immerse yourself in timeless elegance and comfort, where each room and suite offers a serene retreat
-            blending colonial charm with modern luxury.
-          </div>
         </div>
         <div>
           <h2 class="text-center text-[#8C3C45] font-['Gilda_Display'] text-[32px] font-normal mb-4 uppercase">
             RIVERSIDE DINING</h2>
-          <div class="description-dining text-sm text-[#18181B]">
-            Savor elegant meals by the Saigon River, where every dish is paired with serene waterside views and the
-            soft glow of sunset.
-          </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </section>
 
   <div id="location">
@@ -1985,7 +1947,7 @@
           speed: 500,
           swipe: true,
           cssEase: 'cubic-bezier(0.4, 0, 0.2, 1)',
-          // asNavFor: '.dining-slider-text',
+          asNavFor: '.dining-slider-text',
           responsive: [
             {
               breakpoint: 992,
