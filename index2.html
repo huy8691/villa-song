@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Villa Sông Saigon - A riverside retreat where tranquility meets luxury.">
+  <meta name="keywords" content="Villa Song, Saigon, Riverside Hotel, Boutique Hotel, Luxury Stay">
+  <meta name="author" content="Villa Sông Saigon">
+  <title>Villa Sông Saigon</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    // Khởi tạo bản đồ khi trang đã tải xong
+    function initMap() {
+      // Tọa độ của Villa Song Saigon
+      const villaSongLocation = { lat: 10.8157429, lng: 106.7339125 };
+
+      // Tạo bản đồ với tùy chỉnh style
+      const map = new google.maps.Map(document.getElementById("custom-map"), {
+        center: villaSongLocation,
+        zoom: 14,
+        zoomControl: true,
+        scrollwheel: false,
+        gestureHandling: 'cooperative',
+        styles: [
+          // Style tùy chỉnh để có light theme như trong thiết kế
+          {
+            "elementType": "geometry",
+            "stylers": [{ "color": "#f7f7f7" }]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [{ "visibility": "off" }]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#616161" }]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [{ "color": "#f5f5f5" }]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#bdbdbd" }]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#eeeeee" }]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#757575" }]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#f7f7f7" }]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#9e9e9e" }]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#ffffff" }]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#757575" }]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#ffffff" }]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#616161" }]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#9e9e9e" }]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#e5e5e5" }]
+          },
+          {
+            "featureType": "transit.station",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#eeeeee" }]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#eeeeee" }]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#858585" }]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#f7f7f7" }]
+          }
+        ]
+      });
+
+      // Tạo marker chính cho Villa Song Saigon với hình ảnh tùy chỉnh
+      const mainMarker = new google.maps.Marker({
+        position: villaSongLocation,
+        map: map,
+        icon: {
+          url: 'https://villasong.web.exnodes.vn/wp-content/uploads/2025/06/Group-7.png', // Đường dẫn đến hình ảnh marker chính
+          scaledSize: new google.maps.Size(85, 100),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(40, 80)
+        },
+        zIndex: 10 // Đảm bảo marker chính hiển thị trên các marker khác
+      });
+
+      // Tạo info window cho marker chính
+      const mainInfoContent = `
+          <div style="padding:5px">
+            <h3 style="font-family:'Cormorant Garamond', serif; font-size:16px; color:#8C3C45; margin:2px 0px; font-weight:600">VILLA SONG SAIGON</h3>
+            <p style="font-family:'Cormorant Garamond', serif; font-size:12px; color:#000000; margin:2px 0px">197/2 Nguyen Van Huong Street, Thao Dien Ward, District 2, Ho Chi Minh City</p>
+            <p style="font-family:'Cormorant Garamond', serif; font-size:12px; color:#000000; margin:2px 0px">Phone: +84 28 3744 6090</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=10.8157429,106.7339125&destination_place_id=ChIJ3UNrG2EmQjERIH0bJSKCuBs" 
+               target="_blank" 
+               style="font-family:'Cormorant Garamond', serif; cursor: pointer; text-decoration-line: underline; color:#000000; font-size:12px; display:inline-block; margin-top:2px">
+              Get Direction
+            </a>
+          </div>
+      `;
+
+      const mainInfoWindow = new google.maps.InfoWindow({
+        content: mainInfoContent,
+        disableAutoPan: false
+      });
+
+      // Hiển thị info window khi trang tải xong
+      mainInfoWindow.open(map, mainMarker);
+
+      // Thêm sự kiện click cho marker chính để mở lại info window khi click
+      let isMainInfoWindowOpen = true;
+
+      mainMarker.addListener('click', function () {
+        if (isMainInfoWindowOpen) {
+          mainInfoWindow.close();
+          isMainInfoWindowOpen = false;
+        } else {
+          mainInfoWindow.open(map, mainMarker);
+          isMainInfoWindowOpen = true;
+        }
+      });
+
+      // Các địa điểm xung quanh (với tọa độ thực tế)
+      const landmarks = [
+        {
+          position: { lat: 10.8025, lng: 106.7319 },
+          icon: 'https://villasong.web.exnodes.vn/wp-content/uploads/2025/06/image-1-3.png',
+          title: 'Thao Dien Pearl',
+          description: 'Luxury residential complex in Thao Dien',
+          direction: "",
+          place_id: 'ChIJF7lC6vksdTER7MQ9Jmq03wA'
+        },
+        {
+          position: { lat: 10.8036, lng: 106.7392 },
+          icon: 'https://villasong.web.exnodes.vn/wp-content/uploads/2025/06/image-7.png',
+          title: 'Vincom Mega Mall Thao Dien',
+          description: 'Largest shopping mall in Thao Dien area',
+          place_id: 'ChIJ53bYVvksdTERgHRtcf8Mv1E'
+        },
+        {
+          position: { lat: 10.8004353, lng: 106.7337304 },
+          icon: 'https://villasong.web.exnodes.vn/wp-content/uploads/2025/06/image-2-2.png',
+          title: 'Metro Line 1 - Thao Dien Station',
+          description: 'Underground metro station of Line 1',
+          place_id: 'ChIJb9dlA_ksdTERaJHyVuYmcQA'
+        },
+        {
+          position: { lat: 10.8017336, lng: 106.7481101 },
+          icon: 'https://villasong.web.exnodes.vn/wp-content/uploads/2025/06/image-4-1.png',
+          title: 'Estella Heights',
+          description: 'Premium residential complex with world-class amenities',
+          place_id: 'ChIJ3z9byvosdTERF2O2S3CxtFM'
+        },
+        {
+          position: { lat: 10.8002009, lng: 106.7432144 },
+          icon: 'https://villasong.web.exnodes.vn/wp-content/uploads/2025/06/image-3-1.png',
+          title: 'MM Mega Market An Phu',
+          description: 'Wholesale supermarket with diverse products',
+          place_id: 'ChIJbZmf5P0sdTER3H-2GeprJXE'
+        },
+        {
+          position: { lat: 10.790225, lng: 106.689429 },
+          title: "Nhà thờ Tân Định",
+          icon: "https://villasong.web.exnodes.vn/wp-content/uploads/2025/06/image-6.png",
+          description: "",
+          place_id: 'ChIJfRp7fykpdTERiyc6eYhvDoY'
+        },
+        {
+          position: { lat: 10.794186, lng: 106.721878 },
+          title: "Vinhomes Central Park",
+          icon: "https://villasong.web.exnodes.vn/wp-content/uploads/2025/06/image-5.png",
+          description: "",
+          place_id: 'ChIJD_eCxS4pdTERH8Fh9-FSkSQ'
+        }
+      ];
+
+      // Lưu kích thước ban đầu của marker
+      const originalSize = new google.maps.Size(50, 50);
+      const hoverSize = new google.maps.Size(60, 60);  // Kích thước lớn hơn khi hover
+
+      // Thêm các marker cho các địa điểm xung quanh
+      landmarks.forEach((landmark, index) => {
+        const marker = new google.maps.Marker({
+          position: landmark.position,
+          map: map,
+          icon: {
+            url: landmark.icon,
+            scaledSize: originalSize,
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(25, 25)
+          },
+          title: landmark.title
+        });
+
+        // Tạo info window cho mỗi landmark
+        const infoContent = `
+          <div id="info-${index}" style="padding:5px">
+            <h3 style="font-family:'Cormorant Garamond', serif; font-size:16px; color:#8C3C45; margin:2px 0px; font-weight:600">${landmark.title}</h3>
+            <p style="font-family:'Cormorant Garamond', serif; font-size:12px; color:#000000; margin:2px 0px">${landmark.description}</p>
+             <a href="https://www.google.com/maps/dir/?api=1&origin=${landmark.position.lat},${landmark.position.lng}&origin_place_id=${landmark.place_id}&destination=10.8157429,106.7339125&destination_place_id=ChIJ3UNrG2EmQjERIH0bJSKCuBs" 
+               target="_blank" 
+               style="font-family:'Cormorant Garamond', serif; cursor: pointer; text-decoration-line: underline; color:#000000; font-size:12px; display:inline-block; margin-top:2px">
+              Get Direction to Villa Song
+            </a>
+          </div>
+        `;
+
+        const infoWindow = new google.maps.InfoWindow({
+          content: infoContent,
+          disableAutoPan: false
+        });
+
+        let infoHovered = false;
+
+        marker.addListener('mouseover', () => {
+          marker.setIcon({
+            url: landmark.icon,
+            scaledSize: hoverSize,
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(30, 30),
+          });
+          infoWindow.open(map, marker);
+
+          // Đợi DOM render xong để bắt sự kiện hover nội dung
+          google.maps.event.addListenerOnce(infoWindow, 'domready', () => {
+            const infoDiv = document.getElementById(`info-${index}`);
+            if (infoDiv) {
+              infoDiv.addEventListener('mouseenter', () => infoHovered = true);
+              infoDiv.addEventListener('mouseleave', () => {
+                infoHovered = false;
+                infoWindow.close();
+              });
+            }
+          });
+        });
+
+        marker.addListener('mouseout', () => {
+          setTimeout(() => {
+            if (!infoHovered) {
+              infoWindow.close();
+            }
+          }, 200); // Cho chút delay để kịp hover từ marker sang infoWindow
+        });
+
+        // Hiển thị info window khi click vào marker
+        marker.addListener('click', function () {
+          // Đóng tất cả các info window khác trước khi mở cái mới
+          landmarks.forEach(l => {
+            if (l.infoWindow && l.infoWindow !== infoWindow) {
+              l.infoWindow.close();
+            }
+          });
+          infoWindow.open(map, marker);
+        });
+
+        // Lưu infoWindow vào landmark để có thể tham chiếu sau này
+        landmark.infoWindow = infoWindow;
+      });
+
+      // Thêm hiệu ứng vòng tròn mờ xung quanh vị trí chính
+      // const cityCircle = new google.maps.Circle({
+      //   strokeColor: "#18181B",
+      //   strokeOpacity: 0.2,
+      //   strokeWeight: 2,
+      //   fillColor: "#FFE2BD",
+      //   fillOpacity: 0.1,
+      //   map: map,
+      //   center: villaSongLocation,
+      //   radius: 2500, // Bán kính tính bằng mét
+      // });
+    }
+  </script>
+
+  <!-- Tải Google Maps JavaScript API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGV7CpvG0OpnyGzaJiJ4rHWS43yXJQ9sc&callback=initMap"
+    async defer></script>
+
+  <style>
+    a:focus {
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="location">
+    <!-- <iframe class="min-h-[80vh]"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0923793907407!2d106.73386731531882!3d10.806391892300847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317526131b6a43df%3A0x1b84821251b7d220!2sVilla%20Song%20Saigon!5e0!3m2!1sen!2s!4v1647856433076!5m2!1sen!2s"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe> -->
+    <div id="custom-map" style="min-height: 80vh;">
+      <!-- Map container -->
+    </div>
+  </div>
+
+
+</body>
+
+</html>
